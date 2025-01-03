@@ -25,6 +25,14 @@ if __name__ == "__main__":
         while not recipe_crawler.check_link_syntax():
             recipe = input("The recipe link you provided is incorrect. Please provide a new one : ").strip()
             setattr(recipe_crawler, "recipe_link", recipe)
+
+        #add the ingredients to the list
     
-        recipe = input("Would you like to add another recipe to the list ? Enter link : ")
+        binary_response = input("Would you like to add another recipe to the list ? (yes/no)")
+        if binary_response == "yes" or binary_response == "y" or binary_response=="YES" or binary_response=="Yes" or binary_response == "Y":
+            recipe = input("Enter recipe link : ")
+        else : 
+            print("Return the shopping list")
+            recipe = None
+
 
